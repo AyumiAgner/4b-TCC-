@@ -217,6 +217,11 @@ h3{
    justify-content: center;
 }
 
+.map img{
+    height: 350px;
+    width: 450px;
+}
+
 .slide{
     background-color: var(--white);
     margin-bottom: 4rem;
