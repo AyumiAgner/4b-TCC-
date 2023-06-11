@@ -1,0 +1,262 @@
+/*Home*/
+
+/*slide-show*/
+.slide-show .pic{
+    display: none;
+    height: 50rem;
+    margin-top: 2.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*sugestão cardápio*/
+.sugestion{
+    color: var(--white);
+    font-size: 4rem;
+    text-align: center;
+}
+
+.image{
+display: flex;   
+flex-direction: row; 
+position: relative;
+margin-right: 1.5rem;
+justify-content: space-between;
+gap: 1rem;
+}
+
+.image img{
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    height: 26rem;
+    border-radius: 2.5rem; 
+    opacity: .8;
+    background-size: contain;
+}
+
+.item:hover{
+    height: 28rem;
+    transition: 0.2s all;
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0.7rem 0.7rem 0.7rem 0.3rem var(--white);
+}
+
+.content .food-price{
+    position: absolute;
+    top: .2rem;
+    right: 3rem;
+    font-size: 2rem;
+}
+
+.content .content-bottom{
+    position: absolute;
+    bottom: .5rem; 
+    left: 2rem;
+    font-size: 2rem;
+}
+
+.food-name{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.food-rating{
+    display: flex;
+    font-size: 1.5rem;
+    color: var(--white);
+    gap: 1rem;
+}
+
+#menu{
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+#menu a{
+    background-color: var(--red);
+    border-radius: 1rem;
+    padding: 0.7rem 1rem;
+    transition: 0.2s linear;
+    margin-right: 2rem;
+    color: var(--white);
+}
+
+#menu a:hover{
+    background-color: var(--black);
+    letter-spacing: 0.2rem;
+}
+
+/*categorias*/
+.title{
+    text-align: center;
+    color: var(--brown);
+    font-size: 4rem;
+}
+
+.category .box-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    justify-content: space-between;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: 3rem;
+}
+
+.category .box-container .box{
+    border: var(--border);
+    width: 20rem;
+    padding: 2rem;
+    background-color: var(--brown);
+    border-radius: 9rem;
+    margin-bottom: 2rem;
+    box-shadow: 0.7rem 0.7rem  inset var(--white);
+}
+
+.category .box-container .box:hover{
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.category .box-container .box img{
+    height: 7rem;
+    width: 100%;
+    object-fit: contain;  
+}
+
+.cat{
+    font-size: 2rem;
+    color: var(--black);
+}
+/*categorias*/
+
+/*Home*/
+
+/*about page*/
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-flow: column;
+    min-height: 10rem;
+}
+
+h3{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+}
+
+.about p{
+    font-size: 2rem;
+}
+
+.about p a{
+    color: var(--red);
+}
+
+.about p a:hover{
+    text-decoration: underline;
+    color: var(--lightred);
+}
+
+.batchan{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10rem;
+    background-color: var(--pink);
+}
+
+.batchan p{
+    height: 375px;
+    font-size: 2rem;
+    background-color: var(--white);
+    color: black;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.batchan p .img{
+    height: 25rem;
+    
+}
+
+/* mapa */
+
+.local{
+    text-align: center;
+}
+
+.sushicook{
+    height: 40rem;
+    animation: imagem 1s ;
+}
+
+.map{
+    gap: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.slide{
+    background-color: var(--white);
+    margin-bottom: 4rem;
+    border: var(--border);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5rem;
+}
+
+/* avaliações */
+
+.slide img{
+    height: 10rem;
+    width: 10rem;
+    margin-bottom: .5rem;
+    border-radius: 50%;
+}
+
+.slide p{
+    padding: 1rem 0;
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.slide .stars{
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    border: var(--border);
+}
+
+.slide .stars i{
+    font-size: 1.8rem;
+    color: var(--pink);
+}
+
+.slide h1{
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: var(--black);
+}
+
+/*fim about page*/

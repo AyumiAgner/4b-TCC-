@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/*cores de base para o CSS*/
+:root{
+    --black: #000000;
+    --pink: #cc5c5c;
+    --red: #8b0909;
+    --lightred: rgb(255, 0, 0);
+    --white: #ffffff;
+    --other: #330707;
+    --pink2: #943939;
+    --brown: #946239;
+    --border: .2rem solid var(--black);
+}
+
+*{
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    outline: none;  
+    border: none;
+    text-decoration: none;
+}
+
+@media (min-width: 1440px) {
+    html {
+      zoom: 1.5;
+    }
+  }
+  
+  @media (min-width: 2560px) {
+    html {
+      zoom: 1.7;
+    }
+  }
+  
+  @media (min-width: 3860px) {
+    html {
+      zoom: 2.5;
+    }
+  }
+
+/*seleção de texto*/
+*::selection{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+/*customização barra de rolagem*/
+::-webkit-scrollbar{
+    height: .5rem;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--red);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--pink);
+}
+
+/*página do html*/
+html{
+    font-size: 50%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    stop-opacity: 7rem;
+    background: linear-gradient(var(--black), var(--other));
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300%;
+    color: var(--white);
+}
+
+/*seção no cabeçalho*/
+.flex{
+    margin: 0;
+    padding: .2rem;
+    background-color: var(--black);
+}
+
+/*botões*/
+.btn,
+.delete-btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: .2s linear;
+    border-radius: 2rem;
+}
+
+.btn{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.delete-btn{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.btn:hover,
+.delete-btn:hover{
+    letter-spacing: .2rem;
+}
+
+/*cabeçalho*/
+.header{
+    position: sticky;
+    top: 0; 
+    left: 0;
+    right: 0;
+   border-bottom: var(--border);
+   z-index: 1000;
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header .flex .logo{
+    width: 10rem;
+    margin-left: 5rem;
+}
+
+.header .flex .barranav a{
+    font-size: 2rem;
+    color: var(--white);
+    margin: 0 1rem;
+}
+
+.header .flex .barranav a:hover {
+    color: var(--red);
+    cursor: pointer;
+}
+
+.header .flex .icones > * {
+    font-size: 2rem;
+    color: var(--white);
+    margin-right: 1.5rem;
+}
+
+.header .flex .icones > *:hover {
+    color: var(--red);
+    cursor: pointer;
+}
+
+.header .flex .icones span{
+    font-size: 2rem;
+}
+
+.header .flex .perfil{
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    width: 30rem;
+    display: none;
+    animation: aparecer .2s linear;
+}
+
+.header .flex .perfil.active{
+    display: inline-block;
+}
+
+/*animação botão perfil*/
+@keyframes aparecer {
+    0%{
+        transform: translateY(1rem);
+    }
+}
+
+.header .flex .perfil .name{
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.header .flex .perfil .conta{
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.header .flex .perfil .conta a{
+    color: var(--red);
+}
+
+.header .flex .perfil .conta a:hover{
+    color: var(--lightred);
+    text-decoration: underline;
+}
+
+.flex2{
+    margin: 0;
+    padding: .2rem;
+    background-color: var(--white);
+}
+/*cabeçalho fim*/
+
+
+/*rodapé*/
+.footer .end{
+    background-color: var(--pink2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer .end .box{
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer .end .box img{
+    height: 2.5rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: .5rem;
+}
+
+.footer .end .box h3{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.footer .end .box p,
+.footer .end .box a{
+    font-size: 1.22rem;
+    color: var(--black);
+}
+
+.footer .end .box p:hover,
+.footer .end .box a:hover{
+    color: var(--lightred);
+}
+
+.credit{
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+}
