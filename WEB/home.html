@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--link da fonte-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    <!--link do image slider e slide show-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!--link do CSS-->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/todos.css">
+
+</head>
+<body>
+    <!--Cabeçalho início-->
+    <header class="header">
+        <section class="flex">
+            <a href="home.html"> <img src="./IMG/logo3.png" alt="logo" class="logo"></a>
+
+            <!--seção da pág que aponta para outras págs-->
+            <nav class="barranav">
+                <a href="home.html">Home</a>
+                <a href="sobrenos.html">Sobre nós</a>
+                <a href="menu.html">Menu</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <div class="icones">
+                <a href="pesquisa.html"><i class="fas fa-search"></i> </a>
+                <a href="carrinho.html"><i class="fas fa-shopping-cart"></i><span>(3)</span></a>
+                <div id="user-btn" class="fas fa-user"></div>
+            </div>
+
+            <div class="perfil">
+                <p class="name">Ayumi Agner</p>
+                <div class="flex2">
+                    <a href="perfil.html" class="btn">Perfil</a>
+                    <a href="#" class="delete-btn">Sair</a>
+                </div>
+                <p class="conta"><a href="login.html">login</a> ou <a href="cadastro.html">cadastre-se</a></p>
+            </div>
+        </section>
+    </header>
+    <!--Cabeçalho fim-->
+
+    <!--slide-show e image-swiper-->
+    <div class="container">
+       <div class="slide-show">
+        <img class="pic w3-animate-left" src="IMG/1.png" alt="">
+        <img class="pic w3-animate-top" src="IMG/2.png" alt="">
+        <img class="pic w3-animate-right" src="IMG/3.png" alt="">
+        </div>
+    </div>
+
+    <section class="sug">
+        <h1 class="sugestion"><b>--- Sugestões da Batchan ---</b></h1>
+            <div class="swiper sugestions-slider">
+                <div class="swiper-wrapper">
+
+                <div class="swiper-slide image" >
+                    <img class="item" src="IMG/niguiri variados.jpg" alt="" >
+                    <div class="content">
+                        <h1 class="food-price">R$50,00</h1>
+                        <div class="content-bottom">
+                            <h2 class="food-name">niguiri</h2>
+                                <h3 class="food-rating">
+                                <span>4.5</span>
+                                    <div class="rating">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                    </div>
+                                </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide image" >
+                    <img class="item" src="IMG/yakisoba.jpg" alt="" >
+                    <div class="content">
+                        <h1 class="food-price">R$40,00</h1>
+                        <div class="content-bottom">
+                            <h2 class="food-name">yakisoba</h2>
+                                <h3 class="food-rating">
+                                <span>5.0</span>
+                                    <div class="rating">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                    </div>
+                                </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide image" >
+                    <img class="item" src="IMG/Sukiyaki.jpg" alt="" >
+                    <div class="content">
+                        <h1 class="food-price">R$60,00</h1>
+                        <div class="content-bottom">
+                            <h2 class="food-name">sukiyaki</h2>
+                                <h3 class="food-rating">
+                                <span>4.5</span>
+                                    <div class="rating">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                    </div>
+                                </h3>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="swiper-slide image">
+                    <img class="item" src="IMG/combo 14 pecas.jpg" alt="">
+                    <div class="content">
+                        <h1 class="food-price">R$55,00</h1>
+                        <div class="content-bottom">
+                            <h2 class="food-name">combo 14 peças</h2>
+                                <h3 class="food-rating">
+                                <span>4.0</span>
+                                    <div class="rating">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                    </div>
+                                </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide image" >
+                    <img class="item" src="IMG/ramen.jpg" alt="" >
+                    <div class="content">
+                        <h1 class="food-price">R$40,00</h1>
+                        <div class="content-bottom">
+                            <h2 class="food-name">ramen</h2>
+                                <h3 class="food-rating">
+                                <span>4.5</span>
+                                    <div class="rating">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                    </div>
+                                </h3>
+                        </div>
+                    </div>  
+                </div>  
+
+                <div class="swiper-slide image" >
+                    <img class="item" src="IMG/combo 10p salmao.jpg" alt="">
+                    <div class="content">    
+                        <h1 class="food-price">R$40,00</h1>
+                        <div class="content-bottom">
+                            <h2 class="food-name">combo 10 peças salmão</h2>
+                            <h3 class="food-rating">
+                            <span>4.5</span>
+                                <div class="rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide image" >
+                    <img class="item" src="IMG/q_Harumaki.jpg" alt="">
+                    <div class="content">    
+                        <h1 class="food-price">R$30,00</h1>
+                        <div class="content-bottom">
+                            <h2 class="food-name">Harumaki</h2>
+                            <h3 class="food-rating">
+                            <span>4.0 </span>
+                                <div class="rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <br><br><div class="swiper-pagination controls"></div>
+            </div>   
+            <p id="menu">Veja mais opções em nosso <a href="menu.html">Menu</a></p>
+    </section>
+    <!--slide-show e image-swiper-->
+
+    <!--categorias início-->
+    <section class="category">
+
+        <h1 class="title"><b>---Categorias---</b></h1>
+
+        <div class="box-container">
+            <a href="#" class="box">
+                <img src="IMG/cat1.png" alt="">
+                <h3 class="cat"><b>Pratos frios</b></h3>
+            </a>
+        
+            <a href="#" class="box">
+                <img src="IMG/cat2.png" alt="">
+                <h3 class="cat"><b>Pratos quentes</b></h3>
+            </a>
+
+            <a href="#" class="box">
+                <img src="IMG/cat3.png" alt="">
+                <h3 class="cat"><b>Bebidas</b></h3>
+            </a>
+
+            <a href="#" class="box">
+                <img src="IMG/cat4.png" alt="">
+                <h3 class="cat"><b>Sobremesas</b></h3>
+            </a>
+        </div>
+    </section>
+
+    <!--categorias fim-->
+
+    <!--avaliações início-->
+
+    <section class="ava">
+        <h3><b>--- Avaliações ---</b></h3>
+        <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <img src="IMG/p_mae.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    <h1>Lidia Agner</h1>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="IMG/p_andre.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    <h1>André Schaurich</h1>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="IMG/p_luis.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    <h1>Luis Bertuzzo</h1>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="IMG/p_rayssa.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    <h1>Rayssa Pereira</h1>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="IMG/p_yudi.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    <h1>Yudi Agner</h1>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="IMG/p_josi.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    <h1>Josiane Ribeiro</h1>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!--avaliações fim-->
+
+    <!--Rodapé início-->
+    <footer class="footer">
+        <section class="end">
+
+            <div class="box">
+                <img src="IMG/i_mail.png" alt="email">
+                <h3>Nosso email</h3>
+                <a href="mailto:ayumiagner1@gmail.com">ayumiagner1@gmail.com</a>
+            </div>
+
+            <div class="box">
+                <img src="IMG/i_relogio3.png" alt="relógio">
+                <h3>Horário de funcionamento</h3>
+                <p>Terça à Domingo 17:00 - 00:00</p>
+            </div>
+
+            <div class="box">
+                <img src="IMG/i_mapa.png" alt="mapa">
+                <h3>Nosso endereço</h3>
+                <a href="#">Rua Natal 2800, Cascavel - PR</a>
+            </div>
+
+            <div class="box">
+                <img src="IMG/i_whats.png" alt="whatsapp">
+                <h3>Whatsapp</h3>
+                <a href="tel:123456789">(45)12345-6789</a>
+            </div>
+
+            <div class="box">
+                <img src="IMG/i_instagram.png" alt="instagram">
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/">batchan_sushi</a>
+            </div>
+
+            <div class="box">
+                <img src="IMG/i_facebook.png" alt="facebook">
+                <h3>Facebook</h3>
+                <a href="https://pt-br.facebook.com/">batchan_sushi</a>
+            </div>
+
+        </section>
+
+        <div class="credit">Criado por Ayumi Agner e Rayssa dos Reis / todos os direitos reservados</div>
+    </footer>
+
+    <!--Rodapé fim-->
+</body>
+<!--script image slider-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="JS/script.js"></script>
+
+<script>
+var swiper = new Swiper(".reviews-slider", {
+   loop:true,
+   grabCursor:true,
+            spaceBetween: 20,
+   pagination: {
+      el: ".swiper-pagination",
+   },
+   breakpoints: {
+      550: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+   },
+});
+
+var swiper = new Swiper(".sugestions-slider", {
+   loop:true,
+   grabCursor:true,
+            spaceBetween: 20,
+   pagination: {
+      el: ".swiper-pagination",
+   },
+   breakpoints: {
+      550: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 6,
+      },
+   },
+});
+</script>
+</html>
