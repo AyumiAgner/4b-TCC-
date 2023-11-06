@@ -1,0 +1,183 @@
+h3{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--white);
+    text-align: center; 
+}
+
+.i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.img-p{
+    border-radius: 12rem;
+    height: 20rem;
+    border: 3px solid var(--white);
+}
+
+.perfil{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.pro{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    width: 23rem;
+    height: 20rem;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+.btn2{
+    background-color: var(--red);
+    color: var(--white);
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    transition: .2s linear;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn2:hover{
+    letter-spacing: .2rem;
+    background-color: var(--pink);
+}
+
+
+
+.profile,
+.address,
+.orders{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile .boxcontainer1,
+.address .boxcontainer2,
+.orders .boxcontainer3{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    display: none;
+    animation: aparecer .2s linear;
+    margin-bottom: 1.5rem;
+}
+
+.profile .boxcontainer1.active,
+.address .boxcontainer2.active,
+.orders .boxcontainer3.active{
+    display:flex;
+}
+
+.per.active{
+    display:none;
+}
+
+@keyframes aparecer {
+    0%{
+        transform: translateY(1rem);
+    }
+}
+
+.profile .boxcontainer1 .box,
+.address .boxcontainer2 .box,
+.orders .boxcontainer3 .box{
+    padding: 1rem 2rem;
+    border: var(--border);
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 1.5rem;
+}
+
+.orders .boxcontainer3 .box p{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--pink);
+}
+
+.orders .boxcontainer3 .box span{
+    color: var(--black);
+}
+
+.orders .boxcontainer3 .box span .status {
+    color: var(--red);
+}
+
+.form{
+    background-color: var(--white);
+    width: 30rem;
+    border-radius: 2rem;
+    text-align: left;;
+}
+
+.ti{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-decoration: underline;
+    color: var(--black);
+    text-align: center;
+}
+
+.form-control label,
+.form-control-av label {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: var(--black);
+}
+  
+  .form-control input,
+  .form-control select {
+    border: 2px solid #f0f0f0;
+    display: block;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    align-content: center;
+    margin-left: 1rem;
+    color: var(--black);
+  }
+
+  .form-control-av input{
+    border: 2px solid #f0f0f0;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    
+    height: 6rem; 
+    width: 20rem;
+  }

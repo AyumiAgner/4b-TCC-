@@ -1,0 +1,272 @@
+.container {
+    width: 100%;
+    height: 100%vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.form-image {
+    height: 41rem;
+    width: 31rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white2);
+    border-radius: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.form-alt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: fit-content;
+}
+
+.a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-header,
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 21rem;
+    height: 0.3em;
+    background-color: var(--red);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0, 06rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow2);
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: var(--pink);
+}
+
+.input-box input:focus-visible {
+    outline: var(--outline);
+}
+
+.input-box label,
+.cat-group label,
+.arquivo label,
+.tipo-title h9 {
+    font-size: 0.90rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: .5rem;
+}
+
+.tipo-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0 .5;
+    margin-bottom: 1.5rem;
+}
+
+.tipo-group {
+    display: flex;
+    align-items: center;
+}
+
+.tipo-group input {
+    margin-right: 0.35rem;
+}
+
+.tipo-group label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.tipo-input {
+    background-color: var(--pink2);
+    border-radius: .5rem;
+    width: 7rem;
+    text-align: center;
+}
+
+.arquivo {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.cat-group {
+    margin-bottom: 90px;
+    padding-bottom: 50px;
+    position: absolute;
+}
+
+.ver{
+    text-align: center;
+    width: 100%;
+    border: none;
+    background-color: var(--red);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.ver a{
+    color: black;
+    text-decoration: none;
+    text-align: center; 
+}
+
+.alterar,
+.excluir,
+.salvar-button button {
+    width: 100%;
+    border: none;
+    background-color: var(--red);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.alterar:hover,
+.excluir:hover,
+.salvar-button button a:hover,
+.salvar-button button:hover {
+    background-color: var(--pink3);
+    color: var(--white);
+}
+
+.salvar-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+/* .co{
+    display: flex;
+    align-items: center;
+    
+} */
+
+.table{
+    background-color: var(--white);
+    border-radius: 2rem;
+    height: 25rem;
+}
+/* 
+.list_cat{
+    background-color: var(--white);
+} */
+
+.tb_col th{
+    padding: 1rem;
+    text-align: center;    
+}
+
+.tb_lin,
+.tb_lin a{
+    color: var(--black);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-top: 10rem;
+    gap: 1.5rem;
+}
+
+#name-list{
+    margin-bottom: 10rem;
+}
+
+@media screen and (max-width:1330px) {
+    .form-image {
+        display: none;
+
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .input-group {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-width: 10rem;
+        padding-right: 5rem;
+    }
+
+    .tipo-input {
+        margin-top: 2rem;
+    }
+
+    .tipo-group {
+        flex-direction: column;
+
+    }
+
+    .tipo-group {
+        margin-top: 0.5rem;
+    }
+}

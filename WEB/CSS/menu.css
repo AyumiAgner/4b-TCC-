@@ -1,0 +1,119 @@
+h3{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+}
+
+.menu .pratos{
+    margin: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: row; 
+    gap: 1rem;  
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 27rem);
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.menu .box-container .box{
+    border: var(--border);
+    padding: 1rem 2rem;
+    position: relative;
+    background-color: var(--white);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.menu .box-container .box img{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.menu .box-container .box .fa-eye,
+.menu .box-container .box .fa-shopping-cart,
+.menu .box-container .box .fa-times{
+    position: absolute;
+    top: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.3rem ;
+    text-align: center;
+    border: var(--border);
+    background-color: var(--red);
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--white);
+    border-radius: 1.5rem;
+    transition: .2s linear;
+}
+
+.menu .box-container .box .fa-eye:hover,
+.menu .box-container .box .fa-shopping-cart:hover,
+.menu .box-container .box .fa-times:hover{
+    background-color: var(--black);    
+}
+
+.menu .box-container .box .fa-eye{
+    right: -10rem;
+}
+
+.menu .box-container .box .fa-shopping-cart{
+    left: -10rem;
+}
+
+.menu .box-container .box .fa-times{
+    left: -10rem;
+}
+
+.menu .box-container .box:hover .fa-times{
+    left: 1rem;
+}
+
+.menu .box-container .box:hover .fa-eye{
+    right: 1rem;
+}
+
+.menu .box-container .box:hover .fa-shopping-cart{
+    left: 1rem;
+}
+
+.menu .box-container .box .name{
+    font-size: 2rem;
+    color: var(--black);
+    margin: 1rem 0;
+}
+
+.menu .box-container .box .desc{
+    font-size: 1.2rem;
+    color: var(--black);
+    text-align: justify;
+}
+
+.menu .box-container .box .flex3{
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.menu .box-container .box .flex3 .price{
+    margin-right: auto;
+    font-size: 2rem;
+    color: var(--pink);
+}
+
+.menu .box-container .box .flex3 .qtd{
+    padding: 1rem 1rem;
+    border: var(--border);
+    font-size: 1.5rem;
+    border-radius: 2rem;
+}

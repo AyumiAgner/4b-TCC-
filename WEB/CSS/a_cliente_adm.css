@@ -1,0 +1,47 @@
+.pedidos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxcontainer{
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 1.5rem;
+}
+
+.boxcontainer .box{
+    padding: 1rem 2rem;
+    border: var(--border);
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 1.5rem;
+}
+
+.boxcontainer .box p{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--pink);
+}
+
+.boxcontainer .box span{
+    color: var(--black);
+}
+
+.boxcontainer .box span .status {
+    color: var(--red);
+}
+
+
+.btn2{
+    background-color: #ec7575;
+    border: 2px solid   #ec7575;
+    color: #000000;
+    font-size: 1rem;
+    width: 15rem;
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,44 @@
+html{
+    height: 100%;
+}
+
+.cart-title{
+    font-size: 4rem;
+    color: var(--brown);
+    text-align: center;   
+}
+
+.cart-total{
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tot p span{
+    color: var(--red);
+}
+.tot p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.btn2{
+    background-color: var(--red);
+    color: var(--white);
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    transition: .2s linear;
+    border-radius: 2rem;
+    margin-left: 1rem;
+}
+
+.btn2:hover{
+    letter-spacing: .2rem;
+    background-color: var(--pink);
+}
+

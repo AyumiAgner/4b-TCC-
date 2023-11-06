@@ -1,0 +1,56 @@
+.pedidos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    height: 24rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white2);
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.boxcontainer{
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 1.5rem;
+}
+
+.boxcontainer .box{
+    padding: 1rem 2rem;
+    border: var(--border);
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 1.5rem;
+}
+
+.boxcontainer .box p{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--pink);
+}
+
+.boxcontainer .box span{
+    color: var(--black);
+}
+
+.boxcontainer .box span .status {
+    color: var(--red);
+}
+
+.cat-group  {
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 9rem 0;
+    font-size: 1.3rem;
+}

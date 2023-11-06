@@ -75,7 +75,7 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 300%;
+    height: 100%vh;
     color: var(--white);
 }
 
@@ -161,6 +161,35 @@ html{
     font-size: 2rem;
 }
 
+.header .flex .pesquisa{
+    font-size: 1.5rem;
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    right: 2rem;
+    width: 30rem;
+    display: none;
+    animation: aparecer .2s linear;
+}
+
+.header .flex .pesquisa.active{
+    display: inline-block;
+}
+
+.header .flex .pesquisa .fa-search{
+    color: var(--red);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.header .flex .pesquisa .fa-search:hover{
+    color: var(--red);
+}
+
 .header .flex .perfil{
     background-color: var(--white);
     border: var(--border);
@@ -168,7 +197,7 @@ html{
     padding: 1.5rem;
     text-align: center;
     position: absolute;
-    top: 120%;
+    top: 125%;
     right: 2rem;
     width: 30rem;
     display: none;

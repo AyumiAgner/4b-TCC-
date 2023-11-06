@@ -16,18 +16,41 @@ body {
   align-items: center;
 }
 
+.image img{
+  height: 45rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.image2 img{
+  height: 32rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
 .container {
   background-color: #fafafa;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 500px;
+  height: 45rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.container2 {
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   width: 400px;
+  height: 32rem;
   max-width: 100%;
   overflow: hidden;
 }
 
 .header {
   background-color: #eee;
-  padding: 20px;
+  padding: .7rem;
   text-align: center;
 }
 
@@ -37,19 +60,25 @@ body {
 }
 
 .form {
-  padding: 20px;
+  padding: 1rem;
+}
+
+.form2{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .form-control {
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
+  margin-left: 1rem;
 }
-
 
 .form-control label {
   display: inline-block;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .form-control input {
@@ -70,7 +99,6 @@ body {
 
 .form-control small {
   position: absolute;
-  bottom: 0;
   left: 0;
   visibility: hidden;
 }
@@ -82,7 +110,8 @@ body {
   font-size: 1rem;
   width: 100%;
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px;
+  margin-top: 10px;
 }
 
 .form button:hover{
@@ -98,8 +127,6 @@ body {
   border-color: #e74c3c;
 }
 
-
-
 .form-control.success i.fa-check-circle {
   color: #2ecc71;
   visibility: visible;
@@ -113,12 +140,12 @@ body {
 .form-control.error small {
   visibility: visible;
   color: #e74c3c;
+ 
 }
 
 .login{
   margin-top: 1rem;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .login a{

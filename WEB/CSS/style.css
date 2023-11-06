@@ -1,13 +1,14 @@
 /*Home*/
 
 /*slide-show*/
-.slide-show .pic{
+
+.mySlides{
     display: none;
     height: 50rem;
     margin-top: 2.5rem;
 }
 
-.container {
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,15 +35,16 @@ gap: 1rem;
     align-items: center;
     text-align: center; 
     height: 26rem;
+    width: 20rem;
     border-radius: 2.5rem; 
-    opacity: .8;
+    opacity: .9;
     background-size: contain;
 }
 
-.item:hover{
-    height: 28rem;
+.image:hover .item{
+    height: 27rem;
     transition: 0.2s all;
-    opacity: 1;
+    opacity: .5;
     cursor: pointer;
     box-shadow: 0.7rem 0.7rem 0.7rem 0.3rem var(--white);
 }
@@ -54,9 +56,41 @@ gap: 1rem;
     font-size: 2rem;
 }
 
+.content .food-desc{
+    display: none;
+}
+
+.image:hover .content .food-desc{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    text-align:left;
+    display: block;
+}
+
+.content .cart-btn{
+    display: none;
+}
+
+.image:hover .content .cart-btn{
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: .5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    text-align:center;
+    opacity: .6;
+    cursor: pointer;
+    border-radius: .5rem;
+    padding: .1rem;
+    display: block;
+}
+
 .content .content-bottom{
     position: absolute;
-    bottom: .5rem; 
+    bottom: 1rem; 
     left: 2rem;
     font-size: 2rem;
 }
@@ -160,19 +194,6 @@ h3{
     text-align: center;
 }
 
-.about p{
-    font-size: 2rem;
-}
-
-.about p a{
-    color: var(--red);
-}
-
-.about p a:hover{
-    text-decoration: underline;
-    color: var(--lightred);
-}
-
 .batchan{
     height: 400px;
     display: flex;
@@ -193,7 +214,7 @@ h3{
 }
 
 .batchan p .img{
-    height: 25rem;
+    height: 21rem;
     
 }
 
@@ -222,6 +243,8 @@ h3{
     width: 450px;
 }
 
+/* avaliações */
+
 .slide{
     background-color: var(--white);
     margin-bottom: 4rem;
@@ -230,8 +253,6 @@ h3{
     text-align: center;
     border-radius: 5rem;
 }
-
-/* avaliações */
 
 .slide img{
     height: 10rem;
@@ -245,17 +266,6 @@ h3{
     line-height: 2;
     font-size: 1.6rem;
     color: var(--black);
-}
-
-.slide .stars{
-    display: inline-block;
-    padding: .5rem 1.5rem;
-    border: var(--border);
-}
-
-.slide .stars i{
-    font-size: 1.8rem;
-    color: var(--pink);
 }
 
 .slide h1{

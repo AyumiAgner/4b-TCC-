@@ -1,0 +1,32 @@
+/*about page*/
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-flow: column;
+    min-height: 10rem;
+}
+
+.about h3{
+    font-size: 4rem;
+    color: var(--pink);
+}
+
+.about p{
+    font-size: 2rem;
+}
+
+.about p a{
+    color: var(--red);
+}
+
+.about p a:hover{
+    text-decoration: underline;
+    color: var(--lightred);
+}
+
+.tradicional{
+    height: 50rem;
+}
+/*fim about page*/

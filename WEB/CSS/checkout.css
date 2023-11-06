@@ -1,0 +1,97 @@
+/* checkout */
+.fin-title{
+    font-size: 4rem;
+    color: var(--brown);
+    text-align: center; 
+    margin-bottom: 1rem;
+}
+
+.checkout form{
+    max-width: 50rem;
+    margin: 0 auto;
+    border: var(--border);
+    padding: 2rem;
+    font-size: 1.5rem;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+ h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.checkout form .cart-itens{
+    background-color: var(--brown);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkout form .cart-itens p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.checkout form .cart-itens p .price{
+    color: var(--red);
+}
+
+.checkout form .cart-itens .total{
+    background-color: var(--white);
+    font-size: 1.8rem;
+    padding: .5rem;
+    border-radius: 1.5rem;
+}
+
+.checkout form .cart-itens .total .price{
+    color: var(--lightred);
+}
+
+.checkout form .user-info p{
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+.checkout form .user-info p i{
+    color: var(--brown);
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.checkout form .user-info .box{
+    width: 100%;
+    border: var(--border);
+    border-radius: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    font-size: 1.8rem;
+}
+
+.btn2{
+    
+    background-color: var(--red);
+    color: var(--white);
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    transition: .2s linear;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    
+}
+
+.btn2:hover{
+    letter-spacing: .2rem;
+    background-color: var(--pink);
+}
