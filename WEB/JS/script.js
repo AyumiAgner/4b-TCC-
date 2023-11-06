@@ -1,53 +1,39 @@
-perfil = document.querySelector('.header .flex .perfil');
+let perfil = document.querySelector('.header .flex .perfil');
 
 document.querySelector('#user-btn').onclick = () =>{
     perfil.classList.toggle('active');
 }
 
-var myIndex = 0;
-carousel();
+pesquisa = document.querySelector('.header .flex .pesquisa');
 
-function carousel(){
-    var i;
-    var x = document.getElementsByClassName("pic");
-
-    for (i = 0; i < x.length; i++){
-        x[i].style.display = "none";
-    }
-
-    myIndex++;
-
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 4000);
+document.querySelector('#pesquisa-btn').onclick = () =>{
+    pesquisa.classList.toggle('active');
 }
 
-// var slide = 1;
-// showDivs(slide);
+desc = document.querySelector('.menu .box-container .box .desc');
 
-// function plusDivs(n) {
-//     showDivs(slide += n);
-// }
+document.querySelector('#desc-btn').onclick = () =>{
+    desc.classList.toggle('active');
+}
 
-// function currentDiv(n) {
-//     showDivs(slide = n);
-// }
+boxcontainer1 = document.querySelector('.profile .boxcontainer1');
+per = document.querySelector('.per');
 
-// function showDivs(n) {
-//     var i; 
-//     var x = document.getElementsByClassName("image");
-//     var dots = document.getElementsByClassName("demo");
+document.querySelector('#perf').onclick = () =>{
+    boxcontainer1.classList.toggle('active');
+    per.classList.toggle('active');
+}
 
-//     if (n > x.length){slide = 1}
-//     if (n < 1) {slide = x.length}
+boxcontainer2 = document.querySelector('.address .boxcontainer2');
 
-//     for (i = 0; i < x.length; i++){
-//        x[i].style.display = "none";    
-//     }
-    
-//     for (i = 0; i < dots.length; i++){
-//         dots[i].className = dots[i].className.replace("white", "");
-//     }
-//     x[slide-1].style.display = "flex";
-//     dots[slide-1].className += "white";
-// }
+document.querySelector('#end').onclick = () =>{
+    boxcontainer2.classList.toggle('active');
+    per.classList.toggle('active');
+}
+
+boxcontainer3 = document.querySelector('.orders .boxcontainer3');
+
+document.querySelector('#order').onclick = () =>{
+    boxcontainer3.classList.toggle('active');
+}
+

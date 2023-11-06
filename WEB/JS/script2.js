@@ -1,18 +1,24 @@
-
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
+const telefone = document.getElementById("telefone");
+const cpf = document.getElementById("cpf");
+const data = document.getElementById("data");
 const password = document.getElementById("password");
 const passwordConfirmation = document.getElementById("password-confirmation");
 
-form.addEventListener("submit", (e) => {
-   e.preventDefault();
+console.log('panda');
 
+form.addEventListener("submit", (e) => {
    checkInputs();
 });
+
 function checkInputs() {
    const usernameValue = username.value;
    const emailValue = email.value;
+   const telefoneValue = telefone.value;
+   const cpfValue = cpf.value;
+   const dataValue = data.value;
    const passwordValue = password.value;
    const passwordConfirmationValue = passwordConfirmation.value;
 
@@ -30,10 +36,28 @@ function checkInputs() {
       setSuccessFor(email);
    }
 
+   if (telefoneValue === "") {
+      setErrorFor(telefone, "O telefone tem que ser preenchido");
+   } else {
+      setSuccessFor(telefone);
+   }
+
+   if (cpfValue === "") {
+      setErrorFor(cpf, "O Cpf tem que ser preenchido");
+   } else {
+      setSuccessFor(cpf);
+   }
+
+   if (dataValue === "") {
+      setErrorFor(data, "A data tem que ser preenchido");
+   } else {
+      setSuccessFor(data);
+   }
+
    if (passwordValue === "") {
       setErrorFor(password, "A senha precisa ser preenchida");
-   } else if (passwordValue.length < 7) {
-      setErrorFor(password, "A senha tem quje ter mínimo 7 caracteres");
+   } else if (passwordValue.length < 5) {
+      setErrorFor(password, "A senha tem quje ter mínimo 5 caracteres");
    } else {
       setSuccessFor(password);
    }

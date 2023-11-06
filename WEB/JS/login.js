@@ -3,9 +3,9 @@ const form = document.getElementById("form");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+console.log('panda');
 
+form.addEventListener("submit", (e) => {
     checkInputs();
 });
 function checkInputs() {
@@ -20,8 +20,8 @@ function checkInputs() {
 
     if (passwordValue === "") {
         setErrorFor(password, "a senha precisa ser preenchida");
-    } else if (passwordValue.length < 7) {
-        setErrorFor(password, " a senha tem quje ter mínimo 7 caracteres");
+    } else if (passwordValue.length < 5) {
+        setErrorFor(password, " a senha tem quje ter mínimo 5 caracteres");
     } else {
         setSuccessFor(password);
     }
