@@ -23,6 +23,7 @@
    align-items: center;
    justify-content: center;
    margin-bottom: 1.5rem;
+   flex-wrap: wrap; 
 }
 
 .boxcontainer .box{
@@ -39,6 +40,12 @@
     color: var(--pink);
 }
 
+.boxcontainer .box .ppp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .boxcontainer .box span{
     color: var(--black);
 }
@@ -53,4 +60,24 @@
     gap: 2rem;
     max-width: 9rem 0;
     font-size: 1.3rem;
+}
+
+.nada{
+    font-size: 1.7rem;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-title{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;   
+}
+
+.title-pesq{
+    text-align: center;
 }

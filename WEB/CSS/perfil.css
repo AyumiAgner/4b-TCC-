@@ -82,8 +82,7 @@ h1{
 }
 
 .profile .boxcontainer1,
-.address .boxcontainer2,
-.orders .boxcontainer3{
+.address .boxcontainer2{
     flex-wrap: wrap;
     gap: 1.5rem;
     align-items: flex-start;
@@ -93,8 +92,7 @@ h1{
 }
 
 .profile .boxcontainer1.active,
-.address .boxcontainer2.active,
-.orders .boxcontainer3.active{
+.address .boxcontainer2.active{
     display:flex;
 }
 

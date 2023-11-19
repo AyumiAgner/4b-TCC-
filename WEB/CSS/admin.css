@@ -148,8 +148,7 @@ body {
 }
 
 .image{
-    height: 30rem;
-    width: 31rem;
+    width: 24rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,6 +168,7 @@ body {
 
 .ped,
 .categorias,
+.boxes,
 .ava{
     display: flex;
     flex-direction: column;
@@ -185,6 +185,11 @@ body {
 .ava{
     height: 24rem;
     width: 25rem;
+}
+
+.boxes{
+    height: 28rem;
+    width: 25rem; 
 }
 
 .ped-header,

@@ -12,6 +12,7 @@ h3{
     position: relative;
     flex-direction: row; 
     gap: 1rem;  
+    flex-wrap: wrap; 
 }
 
 .menu .box-container{
