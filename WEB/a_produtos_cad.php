@@ -30,6 +30,16 @@
  
  //BUSCANDO SOMENTE UM REGISTRO
  //$resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+
+ $sqlprod = "SELECT count(*) FROM tb_produtos";
+ $stmtprod = $pdo->prepare($sqlprod); 
+ $stmtprod->execute();
+ $nprod = $stmtprod->fetchColumn();
+
+ $sqlcat = "SELECT count(*) FROM tb_categorias";
+ $stmtcat = $pdo->prepare($sqlcat); 
+ $stmtcat->execute();
+ $ncat = $stmtcat->fetchColumn();
 ?>
 
 <!DOCTYPE html>
@@ -151,9 +161,9 @@
                 </div>
 
                 <div class="content">
-                    <p class="tot">Total de produtos e categorias: <span class="total">4</span></p>   
-                    <p>Categorias: <span>2</span></p> 
-                    <p>Produtos: <span>2</span></p>  
+                    <p class="tot">Total de produtos e categorias: <span class="total"><?php echo $nprod + $ncat; ?></span></p>   
+                    <p>Categorias: <span><?php echo $ncat; ?></span></p> 
+                    <p>Produtos: <span><?php echo $nprod; ?></span></p>    
                 </div>
 
                 <div class="salvar-button">

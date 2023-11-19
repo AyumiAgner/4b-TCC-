@@ -21,6 +21,11 @@
  $stmtend->execute();
  $rend = $stmtend->fetch(PDO::FETCH_ASSOC);
 
+ $sqlcompra = "SELECT * FROM tb_compras";
+ $stmtcompra = $pdo->prepare($sqlcompra); 
+ $stmtcompra->execute();
+ $recompra = $stmtcompra->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -49,10 +54,11 @@
 
                 <div class="cart-itens">
                     <h1 class="title">Resumo do pedido</h1>
-                    <p><span class="name">Combo 10 peças de salmão : </span><span class="price">R$40,00</span></p>
-                    <p><span class="name">Combo 10 peças de salmão : </span><span class="price">R$40,00</span></p>
-                    <p><span class="name">Combo 10 peças de salmão : </span><span class="price">R$40,00</span></p>
-                    <p class="total"><span class="name"> Total do pedido : </span><span class="price">R$120,00</span></p>
+                    <?php foreach ($_SESSION['carrinho'] as $key => $resultadop){ ?>
+                    <p><span class="name"><?php echo $resultadop['nome']; ?> : </span><span class="price">R$ <?php echo $resultadop['valor']; ?></span></p>
+                    <?php } ?>
+                    <p><span class="name">Taxa de entrega : </span><span class="price">R$ <?php echo $_SESSION['frete']?></span></p>
+                    <p class="total"><span class="name"> Total do pedido : </span><span class="price">R$ <?php echo $_SESSION['valor_tot_p']+$_SESSION['frete']?></span></p>
                     <a href="carrinho.php" class="btn2">Ver Carrinho</a>
                 </div>
 
@@ -79,25 +85,78 @@
                     <p><i class="fas fa-map-marker-alt"></i><span>Nenhum endereço Adicionado</span></p>
                     <a href="end_cad.php" class="btn2">Adicionar Endereço</a>
                     
-                    <?php }else{ ?>
-                    <h1 class="title">Seu endereço</h1>
-                    <p><i class="fas fa-map-marker-alt"></i><span>Rua <?php echo $rend['rua']?>, <?php echo $rend['numero']?>, <?php echo $rend['bairro']?>, <?php echo $rend['complemento']?>, Cascavel - PR</span></p>
-                    <a href="end_atualizar.php" id="end" class="btn2">Atualizar Endereço</a>
-                    <?php } ?>
-
                     <select name="method" class="box" requires>
                         <option value="" disabled selected>Método de pagamento</option>
                         <option value="dinheiro na entrega">Dinheiro na Entrega</option>
                     </select>
 
-                    <input type="submit" value="Finalizar Pedido" class="btn" style="margin-left: 13rem;">
+                    <button class="btn" onclick="return confirm('Precisa adicionar o endereço primeiro');" style="margin-left: 13rem;">Finalizar Pedido</button>
+
+                    <?php }else{ ?>
+                    <h1 class="title">Seu endereço</h1>
+                    <p><i class="fas fa-map-marker-alt"></i><span>Rua <?php echo $rend['rua']?>, <?php echo $rend['numero']?>, <?php echo $rend['bairro']?>, <?php echo $rend['complemento']?>, Cascavel - PR</span></p>
+                    <a href="end_atualizar.php" id="end" class="btn2">Atualizar Endereço</a>
+
+                    <select name="method" class="box" requires>
+                        <option disabled selected>Método de pagamento</option>
+                        <option value="dinheiro na entrega">Dinheiro na Entrega</option>
+                    </select>
+
+                    <input type="submit" name="finalizar" value="Finalizar Pedido" class="btn" style="margin-left: 13rem;">
+                    <?php } ?>
+
                 </div>
 
             </form>
         </section>
 
      <!--Rodapé-->
-    <?php include 'footer.php'; ?>
 </body>
 <script src="JS/script.js"></script>
 </html>
+<?php
+if (isset($_POST['finalizar'])) {
+    $status_pedido = 'Confirmado';
+    $forma_pagamento = $_POST['method'];
+    $valor_entrega = $_SESSION['frete'];
+    $fk_tb_cliente = $cod_cli;
+    $cod_compra = count($recompra) == 0 ? 1 : count($recompra) + 1;
+
+    $data_compra = date('Y/m/d');
+    $data_compra = str_replace("/", "-", $data_compra);
+
+    try {
+        if (empty($forma_pagamento)) {
+            echo "necessário adicionar a forma de pagamento";
+            exit();
+        }
+        else{
+            $sqlcomp = "INSERT INTO tb_compras (status_pedido, data_compra, forma_pagamento, valor_entrega, fk_tb_cliente) VALUES (:status_pedido, :data_compra, :forma_pagamento, :valor_entrega, :fk_tb_cliente)";
+            $compra = $pdo->prepare($sqlcomp); 
+            $compra->bindParam(':status_pedido', $status_pedido);
+            $compra->bindParam(':data_compra', $data_compra);
+            $compra->bindParam(':forma_pagamento', $forma_pagamento);
+            $compra->bindParam(':valor_entrega', $valor_entrega);
+            $compra->bindParam(':fk_tb_cliente', $fk_tb_cliente);
+            $compra->execute();
+        
+            foreach ($_SESSION['carrinho'] as $key => $resultadop):
+                $sqlcart = "INSERT INTO tb_compra_prod (valor_prod, fk_cod_compra, fk_cod_prod, qtd) VALUES (:valor_prod, :fk_cod_compra, :fk_cod_prod, :qtd)";
+                $cart = $pdo->prepare($sqlcart); 
+                $cart->bindParam(':valor_prod', $resultadop['valor']);
+                $cart->bindParam(':fk_cod_compra', $cod_compra);
+                $cart->bindParam(':fk_cod_prod', $resultadop['cod_prod']);
+                $cart->bindParam(':qtd', $resultadop['qtd']);
+                $cart->execute();
+            endforeach;
+                
+                unset($_SESSION['carrinho']);
+                unset($_SESSION['frete']);
+    
+                header('Location: pedidos.php');
+        }
+    } catch(Exception $e) {
+          $e == 'echo"erro ao finalizar o carrinho"';
+    }
+}
+?>

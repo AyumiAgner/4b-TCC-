@@ -10,6 +10,11 @@
  $stmt->execute();
 
  $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+ $sqlcliente = "SELECT count(*) FROM tb_clientes";
+ $stmtcliente = $pdo->prepare($sqlcliente); 
+ $stmtcliente->execute();
+ $n = $stmtcliente->fetchColumn();
  
  if (isset($_SESSION['cod_cli'])) {
     $cod_cli = $_SESSION['cod_cli'];
@@ -56,7 +61,7 @@
             </div>
 
             <div class="content">
-                <p class="tot">Total de clientes cadastrados: <span class="total">10</span></p>   
+                <p class="tot">Total de clientes cadastrados: <span class="total"><?php echo $n; ?></span></p>   
               
             </div> 
         </div>

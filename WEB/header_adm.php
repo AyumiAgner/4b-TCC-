@@ -33,7 +33,7 @@
             </div>
 
             <div class="pesquisa">
-                <form action="" method="post">
+                <form action="pesquisa_adm.php" method="get">
                     <input type="text" placeholder="Pesquise um produto..." name="pesquisa" class="pesq">
                     <button type="submit" name="search-btn" class="fas fa-search"></button>
                 </form>

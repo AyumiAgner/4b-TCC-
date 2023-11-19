@@ -50,12 +50,14 @@
             <tr class="tb_col">
                 <th>Código</th>
                 <th>Nome</th>
+                <th>Ativo</th>
                 <th>Ações</th>
             </tr>
             <?php foreach($resultado as $r){?>
             <tr class="tb_lin">
                 <td id="name-list"><?php echo $r['cod_cat']; ?></td>    
                 <td id="name-list"><?php echo $r['nome']; ?></td>
+                <td id="name-list"><?php echo $r['ativo']; ?></td>
                 <td> <a href="altcategoria.php?cod_cat= <?php echo $r['cod_cat']; ?>" class="alterar">Alterar</a> - <a href="exccategoria.php?cod_cat= <?php echo $r['cod_cat']; ?>" class="excluir" onclick="return confirm('Excluir essa categoria?');">Excluir</a></td>
             </tr>
             <?php } ?>

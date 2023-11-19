@@ -19,8 +19,12 @@
  $sqlaval = "SELECT * FROM tb_avaliacoes";
  $stmav = $pdo->prepare($sqlaval); 
  $stmav->execute();
-
  $res = $stmav->fetchAll(PDO::FETCH_ASSOC);
+
+ $sqla = "SELECT count(*) FROM tb_avaliacoes";
+ $stma = $pdo->prepare($sqla); 
+ $stma->execute();
+ $n = $stma->fetchColumn();
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +60,7 @@
             </div>
 
             <div class="content">
-                <p class="tot">Total de Avaliações realizados: <span class="total">6</span></p>   
+                <p class="tot">Total de Avaliações realizados: <span class="total"><?php echo $n; ?></span></p>   
             </div> 
         </div>
     </div>
@@ -72,9 +76,10 @@
             ?>
         <div class="aval">
             <img src="<?php  echo $r['img'] ? $r['img'] :"IMG/logo3.png"; ?>" alt="">
-            <p><?php echo $aval['descricao']; ?></p>
+            <p><?php echo $aval['descricao']; ?> -  Ativo: <?php echo $aval['ativo']; ?></p>
             <h1><?php echo $r['nome_cli']; ?></h1><br>
             <a href="excaval.php?cod_aval= <?php echo $aval['cod_aval']; ?>" class="btn2" onclick="return confirm('Excluir esse cliente?');">Excluir</a>
+            <a href="altaval.php?cod_aval= <?php echo $aval['cod_aval']; ?>" class="btn2">Alterar</a>
         </div>
         <?php } ?>
     </div>

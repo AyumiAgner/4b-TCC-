@@ -29,7 +29,7 @@ if (isset($_SESSION['cod_cli'])) {
 
         <div class="icones">
             <div id="pesquisa-btn" class="fas fa-search"></div>
-            <a href="carrinho.php"><i class="fas fa-shopping-cart"></i><span>(3)</span></a>
+            <a href="carrinho.php"><i class="fas fa-shopping-cart"></i><span>(<?php echo !isset($_SESSION['carrinho']) || $_SESSION['carrinho'] == 0 ? 0 : count($_SESSION['carrinho']); ?>)</span></a>
             <div id="user-btn" class="fas fa-user"></div>
         </div>
 
@@ -54,7 +54,7 @@ if (isset($_SESSION['cod_cli'])) {
         </div><?php } ?>
 
     <div class="pesquisa">
-        <form action="" method="GET">
+        <form action="pesquisa.php" method="GET">
             <input type="text" placeholder="Pesquise um produto..." name="pesquisa">
             <button type="submit" name="search-btn" class="fas fa-search"></button>
         </form>
@@ -64,23 +64,3 @@ if (isset($_SESSION['cod_cli'])) {
     </section>
 </header>
 <!--Cabeçalho fim-->
-<?php
- if (isset($_GET['search-btn'])){
-    $pesquisa = $_GET['search-btn'] . "%";
-
-    $sqlpesq = "SELECT *FROM tb_produtos WHERE nome LIKE :pesquisa ";
-    $stmpesq = $pdo->prepare($sqlpesq);
-    $stmpesq->bindParam(":pesquisa", $pesquisa);
-    $stmpesq->execute();
-
-    $resultado = $stmpesq->fetchAll(PDO::FETCH_ASSOC);
-
-    if(count($resultado) > 0){
-        echo "Resultado da pesquisa  ";
-
-        foreach ($resultado as $r){
-            echo $r['nome']  ;
-        }
-    }
- }
-?>

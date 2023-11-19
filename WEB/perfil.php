@@ -110,7 +110,7 @@
             <div class="pro">
                 <h1 class="title">Seus Pedidos</h1>
                 <p>Mostrar pedidos realizados anteriormente</p>
-                <div><button id="order" class="btn2">Ver Pedidos</button></div>
+                <div><a href="pedidos.php" class="btn2">Ver Pedidos</a></div>
             </div>
         </section>
 </section>

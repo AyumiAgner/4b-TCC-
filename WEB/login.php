@@ -42,11 +42,13 @@
                 <i class="fas fa-exclamation-circle"></i>
                 <i class="fas fa-check-circle"></i>
                 <small> Mensagem de erro</small>
+                <p>Esqueceu sua senha? <a href="#">Recupere a senha</a></p>
             </div>
 
             <button type="submit" name="btnSalvar">Enviar</button>
         </form>
         <p class="login">Não tem Login? faça o <a href="cadastro.php">Cadastro</a></p>
+        
     </div>
 
     <div class="image2">

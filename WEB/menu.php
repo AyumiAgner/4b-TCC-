@@ -37,7 +37,8 @@
     <!-- menu início -->
     <section class="menu">
 
-        <?php foreach($resultado as $re){?>
+        <?php foreach($resultado as $re){
+            if ($re['ativo'] == 'S'){?>
             <h3 id="frios"><?php echo $re['nome']; ?></h3>
 
         <?php foreach($resultadop as $r){
@@ -59,7 +60,7 @@
                 </div>
         <?php } ?>
             </div>
-        <?php } ?>      
+        <?php } }?>      
     </section>
     <!-- menu fim -->
 

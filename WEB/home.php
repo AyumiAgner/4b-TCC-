@@ -64,7 +64,8 @@
                         <div class="content">
                             <h1 class="food-price">R$ <?php echo $resp['valor']; ?></h1>
                             <p class="food-desc"><?php echo $resp['descricao']; ?></p>
-                            <form action="GET"><button class="cart-btn" name="add_to_cart"><a href="carrinho.php?prod_id=<?php echo $resp['cod_prod']; ?>">Adicionar ao Carrinho</a></button></form>
+                            <form action="carrinho.php" method="GET">
+                                <button class="cart-btn" ><a href="carrinho.php?prod_id=<?php echo $resp['cod_prod']; ?>">Adicionar ao Carrinho</a></button></form>
                             <div class="content-bottom">
                                 <h2 class="food-name"><?php echo $resp['nome']; ?></h2>  
                             </div>
@@ -82,11 +83,12 @@
     <section class="category">
         <h1 class="title"><b>---Categorias---</b></h1>
         <div class="box-container">
-            <?php foreach($resultado as $r){?>
+            <?php foreach($resultado as $r)
+             if ($r['ativo'] == 'S'){{?>
             <a href="menu.php" class="box">
                 <h3 class="cat"><b><?php echo $r['nome']; ?></b></h3>
             </a>
-            <?php } ?>
+            <?php } }?>
         </div>
     </section>
     <!--categorias fim-->
@@ -98,7 +100,8 @@
         <div class="swiper reviews-slider">
             <div class="swiper-wrapper">
                 
-                <?php foreach($res as $aval){
+                <?php foreach($res as $aval)
+                if ($aval['ativo'] == 'S'){{
                 $claval = "SELECT tb_clientes.nome_cli, tb_clientes.img FROM tb_avaliacoes RIGHT JOIN tb_clientes ON tb_clientes.cod_cli = tb_avaliacoes.fk_cod_cl WHERE cod_aval = :cod_aval";
                 $stmav = $pdo->prepare($claval);
                 $stmav->bindParam(':cod_aval', $aval['cod_aval']);
@@ -111,7 +114,7 @@
                     <p><?php echo $aval['descricao']; ?></p>
                     <h1><?php echo $r['nome_cli']; ?></h1>
                 </div>
-                <?php } ?>
+                <?php }} ?>
             </div>
             <div class="swiper-pagination"></div>
         </div>

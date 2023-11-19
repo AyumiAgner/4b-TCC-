@@ -63,7 +63,8 @@
         <div class="swiper reviews-slider">
         <div class="swiper-wrapper">
                 
-                <?php foreach($res as $aval){
+                <?php foreach($res as $aval)
+                if ($aval['ativo'] == 'S'){{
                 $claval = "SELECT tb_clientes.nome_cli, tb_clientes.img FROM tb_avaliacoes RIGHT JOIN tb_clientes ON tb_clientes.cod_cli = tb_avaliacoes.fk_cod_cl WHERE cod_aval = :cod_aval";
                 $stmav = $pdo->prepare($claval);
                 $stmav->bindParam(':cod_aval', $aval['cod_aval']);
@@ -76,7 +77,7 @@
                     <p><?php echo $aval['descricao']; ?></p>
                     <h1><?php echo $r['nome_cli']; ?></h1>
                 </div>
-                <?php } ?>
+                <?php } }?>
             </div>
             <div class="swiper-pagination"></div>
         </div>

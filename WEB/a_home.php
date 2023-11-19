@@ -15,6 +15,31 @@
    
     $re = $stmc->fetch(PDO::FETCH_ASSOC);
  }
+
+ $sqlaval = "SELECT count(*) FROM tb_avaliacoes";
+ $stmav = $pdo->prepare($sqlaval); 
+ $stmav->execute();
+ $res = $stmav->fetchColumn();
+
+ $sqlcliente = "SELECT count(*) FROM tb_clientes";
+ $stmtcliente = $pdo->prepare($sqlcliente); 
+ $stmtcliente->execute();
+ $resultado = $stmtcliente->fetchColumn();
+
+ $sqlp = "SELECT count(*) FROM tb_produtos";
+ $stmtp = $pdo->prepare($sqlp); 
+ $stmtp->execute();
+ $nprod = $stmtp->fetchColumn();
+
+ $sqlc = "SELECT count(*) FROM tb_categorias";
+ $stmt = $pdo->prepare($sqlc); 
+ $stmt->execute();
+ $ncat = $stmt->fetchColumn();
+
+ $sqlcomp = "SELECT count(*) FROM tb_compras";
+ $stmtcomp = $pdo->prepare($sqlcomp);
+ $stmtcomp->execute();
+ $ncomp = $stmtcomp->fetchColumn();
 ?>
 
 <!DOCTYPE html>
@@ -40,15 +65,15 @@
             <img src="IMG/Sushi cook-pana.svg">
         </div>
     
-        <div class="ped">
-            <div class=" ped-header">
+        <div class="ava">
+            <div class=" ava-header">
                 <div class="title">
                     <h1>Pedidos Realizados</h1>
                 </div>
             </div>
 
             <div class="content">
-                <p class="tot">Total de pedidos realizados: <span class="total">2</span></p>   
+                <p class="tot">Total de pedidos realizados: <span class="total"><?php echo $ncomp; ?></span></p>   
                 <p>Pendentes: <span>2</span></p> 
                 <p>Fazendo: <span>0</span></p>  
                 <p>Finalizados: <span>0</span></p>
@@ -58,13 +83,43 @@
         <div class="ava">
             <div class=" ava-header">
                 <div class="title">
-                    <h1>Avaliações de clientes</h1>
+                    <h1>Informações de clientes</h1>
                 </div>
             </div>
     
             <div class="content">
-                <p class="tot">Total de Avaliações realizados: <span class="total">6</span></p>   
+                <p class="tot">Total de Avaliações realizados: <span class="total"><?php echo $res; ?></span></p> 
+                <p class="tot">Total de Clientes cadastrados: <span class="total"><?php echo $resultado; ?></span></p>   
             </div> 
+        </div>
+
+    </section>
+    <section class="home">
+
+        <div class="ava">
+            <div class=" ava-header">
+                <div class="title">
+                    <h1>Produtos e Categorias</h1>
+                </div>
+            </div>
+            <div class="content">
+                <p class="tot">Total de produtos e categorias: <span class="total"><?php echo $nprod + $ncat; ?></span></p>   
+                <p>Categorias: <span><?php echo $ncat; ?></span></p> 
+                <p>Produtos: <span><?php echo $nprod; ?></span></p>  
+            </div>
+        </div>
+
+        <div class="ava">
+            <div class=" ava-header">
+                <div class="title">
+                    <h1>Cidades Cadastradas</h1>
+                </div>
+            </div>
+            <div class="content">
+                <p class="tot">Total de cidades: <span class="total">1</span></p>   
+                <p>Cidades: <span>1</span></p> <br>
+                <a href="a_cidade.php" class="btn2">Adicionar mais</a>  
+            </div>
         </div>
 
     </section>
